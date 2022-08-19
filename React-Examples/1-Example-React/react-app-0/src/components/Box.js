@@ -3,7 +3,7 @@ import React from "react";
 const Box = () => {
     return (
         <>
-            <p>Lorena</p>
+            <p>Box</p>
         </>
     )
 }
