@@ -15,7 +15,7 @@ They can be created as function or as a Class:
 const ComponentName = () => {
     return (
         <>
-
+            ...
         </>
     )
 }
@@ -25,14 +25,14 @@ class ComponentName extends React.Component {
   render() {
     return (
         <>
-
+            ...
         </>
     );
   }
 }
 ```
 ---
-## Properties
+## 1. Properties
 - To work with ``props`` in a componente we have to pass it as an argument of a functional component.
 - The JSX attributes go through the component as an object called ``props``. Where the attribute is *property* of the props object.
 
@@ -59,8 +59,10 @@ const App = () => {
     )
 }
 ```
+(see ``coding-1-with-props``)
+
 ---
-## States and Life Cicle
+## 2. States and Life Cicle
 ### A React Hook
 - Hooks can only be used within function components.
 - To use a Hook first it has to be imported
@@ -86,17 +88,27 @@ const App = () => {
   const [count, setCount] = useState(0);
 
   const decrementCount = () => setCount(count - 1)
+  const increaseCount = () => setCount(count + 1)
 
 
   return (
     <>
-    <button onClick={decrementCount}>-</button>
+        <button onClick={decrementCount}>-</button>
         <span>{count}</span>
         <button onClick={increaseCount}>+</button>
     </>
   );
 }
 ```
+(see ``coding-2-with-props``)
+
+---
+
+## 3. Handle Events
+- With JSX we pass a function as the event handler as we saw in ``2.States and Life Cicle``.
+- We create an HTML element and when a event is fired it calls a function which is in JS so it goes between ``{}``
+- With React we do not need to cal ``addEventListener``, it enough to provide a ``listener``. ( *onClick*, *onSubmit*, ... )
+
 
 
 
