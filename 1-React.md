@@ -3,7 +3,7 @@
 ## Create a React App:
     npx create-react-app AppName
 
-
+---
 ## React Components
 - React components can be created as a class or as a function.
 - It is a better practice to do it with arrow functions.
@@ -31,7 +31,7 @@ class ComponentName extends React.Component {
   }
 }
 ```
-
+---
 ## Properties
 - To work with ``props`` in a componente we have to pass it as an argument of a functional component.
 - The JSX attributes go through the component as an object called ``props``. Where the attribute is *property* of the props object.
@@ -59,8 +59,44 @@ const App = () => {
     )
 }
 ```
+---
+## States and Life Cicle
+### A React Hook
+- Hooks can only be used within function components.
+- To use a Hook first it has to be imported
 
-## State and Life Cicle
+```javascript
+    import { useState } from 'react';
+```
+
+### **useState()** 
+- The useState() Hook let us add an state to a function component.
+- We create an ``state`` variable and a method to update the state and it is called as the variable but with ``set`` at the beginning.
+- If we want to add an initial value it will be between brackets (...).
+
+**EXAMPLE:**
+```javascript
+    const [count, setCount] = useState(0);
+```
+
+- The Hook fired with every render of the app
+```javascript
+const App = () => {
+
+  const [count, setCount] = useState(0);
+
+  const decrementCount = () => setCount(count - 1)
+
+
+  return (
+    <>
+    <button onClick={decrementCount}>-</button>
+        <span>{count}</span>
+        <button onClick={increaseCount}>+</button>
+    </>
+  );
+}
+```
 
 
 

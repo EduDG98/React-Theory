@@ -1,0 +1,26 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+span {
+  font-size: 75px;
+}
+
+.container-1 button {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  font-size: 30px;
+  background-color: rgb(233, 173, 8);
+}
+
+.container-2 button {
+
+  margin: 10px;
+  font-size: 30px;
+  background-color: rgb(233, 79, 8);
+}
