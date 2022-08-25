@@ -107,7 +107,75 @@ const App = () => {
 ## 3. Handle Events
 - With JSX we pass a function as the event handler as we saw in ``2.States and Life Cicle``.
 - We create an HTML element and when a event is fired it calls a function which is in JS so it goes between ``{}``
-- With React we do not need to cal ``addEventListener``, it enough to provide a ``listener``. ( *onClick*, *onSubmit*, ... )
+- With React we do not need to cal ``addEventListener``, it is enough to provide a ``listener``. ( *onClick*, *onSubmit*, ... )
+
+(see ``coding-3-with-events``)
+
+---
+
+## 4. External Props
+- Normally, in React, we create many components which will be sons and siblings of other components.
+- All this ``sons components`` will be called in a main component which form the App.
+- To comunicate between them we pass the information through props. Normally, we will have a state in the father to save that information.
+
+**EXAMPLE:**
+- We create a father component ``App`` and a son component ``ButtonWrapper``.
+- We use useState to save the state of the count
+```javascript
+    const App = () => {
+
+        const [count, setCount] = props;
+
+        // Create the function to increase the count
+        const handleIncreaseCount = () => setCount(count + 1);
+
+        return(
+            <>
+                <p>{count}</p>
+                <ButtonWrapper text='+' onClickProp={handleIncreaseCount}/>
+            </>
+        )
+    }
+```
+
+- Create the son component with the ``props`` arguments.
+- ``props`` is like an object with contain all the props that we pass from the father to the son element, in this case are ``text`` and ``onClickProp``.
+- These ``props`` can have any name, normally is the same but we have change to differenciate with variables.
+```javascript
+    export const ButtonWrapper = (props) => {
+
+        // DEstructuring the props
+        const { text, onClickProp } = props;    
+
+        return(
+            <>
+                <button onClick={onClickProp}>{text}</button>
+            </>
+        )
+    }
+```
+- We can also create a function in the son component and add there the ``onClickProp`` in case we want to add more code:
+```javascript
+export const ButtonWrapper = (props) => {
+    
+    // DEstructuring the props
+        const { text, onClickProp } = props;    
+
+        const handleOnClick = () => onClickProp();
+        
+        return(
+            <>
+                <button onClick={handleOnClick}>{text}</button>
+            </>
+        )
+    }
+```
+- Normally, instead of ``onClickProp`` it is name ``onClick``.
+
+(see ``coding-4-with-external-props``)
+
+---
+
 
 
 

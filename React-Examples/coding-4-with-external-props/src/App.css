@@ -1,0 +1,32 @@
+.container {
+    margin: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(44, 32, 218);
+    border-radius: 10px;
+}
+
+.display-container {
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.display-container p {
+    color: aliceblue;
+}
+
+.button-container button {
+    margin: 5px;
+    width: 30px;
+    background-color: rgb(226, 64, 43);
+    font-size: 20px;
+    color: whitesmoke;
+    border-radius: 5px;
+}
