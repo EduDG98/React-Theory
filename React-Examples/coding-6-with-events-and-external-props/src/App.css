@@ -1,0 +1,25 @@
+.container {
+    margin: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+    background-color: goldenrod;
+    border-radius: 10px;
+}
+
+.display-container {
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.button-container button {
+    background-color: blueviolet;
+    color: whitesmoke;
+    border-radius: 5px;
+}
