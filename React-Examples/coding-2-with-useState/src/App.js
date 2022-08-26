@@ -11,8 +11,8 @@ const App = () => {
   const resetCount = () => setCount(0)
 
   return (
-    <div class='main-container'>
-      <div class='container-1'>
+    <div className='main-container'>
+      <div className='container-1'>
 
         <button onClick={decrementCount}>-</button>
         <span>{count}</span>
@@ -20,7 +20,7 @@ const App = () => {
 
       </div>
 
-      <div class='container-2'>
+      <div className='container-2'>
         <button onClick={resetCount}>RESET</button>
 
       </div>
