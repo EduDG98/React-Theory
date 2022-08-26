@@ -1,35 +1,35 @@
 import './App.css';
 import { Display } from './components/Display';
 import { InputWrapper } from './components/InputWrapper';
+import { CustomButton } from './components/CustomButton';
+
 import { useState } from "react"
 
 
 function App() {
 
-  const [count, setCount] = useState(0);
+  const [sentence, setSentence] = useState('- - - - - -');
 
-/*   const handleIncreaseCounter = (textReceived) => {
-    console.log(textReceived)
-    setCount(count + 1);
+  const handleOnWrite = newValue => {
+    setSentence(newValue)
   }
-  const handleDecreaseCounter = () => {
-    setCount(count - 1);
-  } */
-
-
 
   return (
-    <div class='container'>
-      <div class='display-container'>
-        <Display currentCount={count} />
+    <div className='container'>
+
+      <div className='display-container'>
+        <Display sentence={sentence} />
       </div>
-      <div class='button-container'>
-        <InputWrapper />
+
+      <div className='form-container'>
+        <InputWrapper onWrite={handleOnWrite} />
 
 
-        {/* <ButtonWrapper onButtonClick={handleIncreaseCounter} text='A' />
-        <ButtonWrapper onButtonClick={handleDecreaseCounter} text='B' /> */}
+        <CustomButton />
+        <CustomButton />
+
       </div>
+
     </div>
   );
 }

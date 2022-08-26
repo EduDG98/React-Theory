@@ -1,17 +1,17 @@
 
 export const InputWrapper = (props) => {
 
-    const { text } = props;
+    const { text, onWrite } = props;
 
     const handleOnChange = (event) => {
-        console.log(event.target.value)
-        // onUpdateField()
+        //value is the current value in the input
+        onWrite(event.target.value)
     }
 
 
     return (
         <>
-            <input value={text} onChange={handleOnChange}></input>
+            <input onChange={handleOnChange} />
         </>
     )
 }

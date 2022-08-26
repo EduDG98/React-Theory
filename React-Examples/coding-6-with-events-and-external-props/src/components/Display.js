@@ -1,11 +1,11 @@
 
 
 export const Display = (props) => {
-    const { currentCount } = props;
+    const { sentence } = props;
 
     return (
         <>
-            <p>{currentCount}</p>
+            <p>{sentence}</p>
         </>
     )
 }

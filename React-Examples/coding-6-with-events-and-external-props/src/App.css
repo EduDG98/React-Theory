@@ -8,8 +8,8 @@
 
     padding: 10px;
     height: 100px;
-    width: 100px;
-    background-color: goldenrod;
+    width: 300px;
+    background-color: rgb(151, 46, 134);
     border-radius: 10px;
 }
 
@@ -18,8 +18,28 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.button-container button {
-    background-color: blueviolet;
+.display-container p {
     color: whitesmoke;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+
+.form-container input {
+    width: 200px;
+    background-color: rgb(114, 236, 189);
+    color: rgb(0, 0, 0);
     border-radius: 5px;
+}
+
+.form-container button {
+    border-radius: 10px;
+}
+
+.clean-button {
+    color: green
 }
