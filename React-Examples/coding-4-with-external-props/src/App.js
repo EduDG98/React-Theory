@@ -13,13 +13,13 @@ const App = () => {
 
 
   return (
-    <div class='container'>
+    <div className='container'>
 
-      <div class='display-container'>
+      <div className='display-container'>
         <Display myCountProp={count} />
       </div>
 
-      <div class='button-container'>
+      <div className='button-container'>
         <ButtonWrapper symbol='+' onClickProp={handleIncreaseCount} />
         <ButtonWrapper symbol='-' onClickProp={handleDescreaseCount} />
       </div>
