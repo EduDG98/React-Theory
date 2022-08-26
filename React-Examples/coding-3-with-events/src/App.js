@@ -8,7 +8,7 @@ function App() {
   const handleClick = () => setRelay(!relay)
 
   return (
-    <div class='container'>
+    <div className='container'>
       <button onClick={handleClick}> {relay ? 'ON' : 'OFF'} </button>
     </div>
   );
