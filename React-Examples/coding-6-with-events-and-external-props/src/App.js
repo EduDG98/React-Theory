@@ -14,6 +14,10 @@ function App() {
     setSentence(newValue)
   }
 
+  const handleAccept = () => {
+    setSentence('- - - - - -')
+  }
+
   return (
     <div className='container'>
 
@@ -25,8 +29,8 @@ function App() {
         <InputWrapper onWrite={handleOnWrite} />
 
 
-        <CustomButton />
-        <CustomButton />
+        <CustomButton type='✔' />
+        <CustomButton type='✖' onClick={handleAccept} />
 
       </div>
 

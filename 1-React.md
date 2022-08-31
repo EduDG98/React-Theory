@@ -172,10 +172,14 @@ export const ButtonWrapper = (props) => {
 ```
 - Normally, instead of ``onClickProp`` it is name ``onClick``.
 
-(see ``coding-4-with-external-props``)
+(see **``coding-4-with-external-props``**)
 
----
+- If we want to alterate a state which is pass as a prop 
 
+- We use ``events`` to move up (to give a parent component) a state.
+- We use ``props`` (the object) to move down a state for example (from a parent to a child).
+
+(see **``coding-5-with-events-and-external-props``**)
 
 
 
