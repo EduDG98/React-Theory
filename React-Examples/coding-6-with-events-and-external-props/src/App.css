@@ -1,25 +1,28 @@
 .container {
     margin: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
     padding: 10px;
+
     height: 130px;
     width: 300px;
-    background-color: rgb(151, 46, 134);
+    background-color: rgb(141, 20, 121);
     border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr;
 }
 
 .display-container {
+    width: 295px;
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .display-container p {
     color: whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
 }
 
 .form-container {
@@ -31,7 +34,7 @@
 
 .form-container input {
     width: 200px;
-    background-color: rgb(114, 236, 189);
+    background-color: rgb(153, 223, 196);
     color: rgb(0, 0, 0);
     border-radius: 5px;
 }
@@ -40,6 +43,10 @@
     border-radius: 10px;
 }
 
-.clean-button {
-    color: green
+.success {
+    background-color: greenyellow;
+}
+
+.error {
+    background-color: red;
 }
