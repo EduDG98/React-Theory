@@ -1,0 +1,19 @@
+ul {
+    background-color: coral;
+
+    border-radius: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 600px) {
+        justify-content: space-between;
+    }
+}
+
+li {
+    margin: 10px;
+    display: inline-block;
+}

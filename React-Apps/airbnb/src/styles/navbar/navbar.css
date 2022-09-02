@@ -1,9 +1,7 @@
 .container {
+    background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+    align-items: center;
 
-nav {
-    position: sticky;
-    top: 0px;
 }

@@ -1,4 +1,4 @@
-export const Main = () => {
+export const Gallery = () => {
     return (
         <>
             <p>

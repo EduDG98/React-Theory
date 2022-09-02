@@ -11,6 +11,9 @@ export const Searchbar = () => {
                     <li>
                         <a>Any week</a>
                     </li>
+                    <li>
+                        <a>Search bar</a>
+                    </li>
                 </ul>
             </nav>
         </header>
