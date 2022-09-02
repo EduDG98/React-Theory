@@ -1,20 +1,9 @@
-import './App.css';
-import logo from './images/main-logo.png';
+import './styles/App.css';
+import { Navbar } from './components/navbar/Navbar';
 
 function App() {
   return (
-    <>
-      <div className="bar-container">
-        <img src={logo} alt='Logo' />
-        <div className='center'>
-
-        </div>
-
-      </div>
-      <div className="app-container">
-        hula
-      </div>
-    </>
+    <Navbar />
   );
 }
 
