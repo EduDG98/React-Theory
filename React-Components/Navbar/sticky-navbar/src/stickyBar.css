@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    list-style: none;
+    background-color: blanchedalmond;
+    height: 80px;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+a:hover {
+    cursor: pointer;
+    font-size: 21px;
+}
