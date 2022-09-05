@@ -1,3 +1,5 @@
+import '../styles/gallery.css'
+
 export const Gallery = () => {
     return (
         <>

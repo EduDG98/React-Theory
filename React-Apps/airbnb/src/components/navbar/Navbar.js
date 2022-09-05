@@ -1,16 +1,13 @@
 import '../../styles/navbar/navbar.css'
-import { Logo } from './Logo'
-import { Searchbar } from './Searchbar'
-import { Settings } from './Settings'
+import { FooterNavbar } from './FooterNavBar'
+import { HeaderNavbar } from './HeaderNavbar'
+
 
 export const Navbar = () => {
-
-
     return (
-        <div className='container'>
-            <Logo />
-            <Searchbar />
-            <Settings />
+        <div className='navbar'>
+            <HeaderNavbar />
+            <FooterNavbar />
         </div>
     )
 }
