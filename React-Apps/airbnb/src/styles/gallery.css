@@ -1,5 +1,17 @@
-p {
-    text-align: justify;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 30px;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+}
+
+.card>img {
+    border: 2px solid red;
+    object-fit: contain;
+    height: 100%;
+    max-width: 100%;
 }

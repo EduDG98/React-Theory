@@ -1,7 +1,9 @@
+import './../../styles/navbar/searchbar.css'
+
 export const Searchbar = () => {
     return (
         <div >
-            a
+            <input type='text' placeholder='Add guest' />
         </div >
     )
 }
