@@ -1,0 +1,17 @@
+ul {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2em;
+    justify-content: left;
+    align-items: center;
+
+    list-style: none;
+}
+
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #D6CDA4;
+
+}
