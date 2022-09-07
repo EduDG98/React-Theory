@@ -1,5 +1,4 @@
 import logo from '../../images/main-logo.png';
-import '../../styles/navbar/logo.css'
 
 export const Logo = () => {
     return (

@@ -1,24 +1,25 @@
-import '../../styles/navbar/menubar.css'
-import { Searchbar } from './Searchbar'
+import { Anywhere } from './Anywhere'
+import { AnyWeek } from './AnyWeek'
+import { AddGuest } from './AddGuest'
 import { SearchButton } from './SearchButton'
 
 export const Menubar = () => {
     return (
-        <>
+        <div className='menubar-container'>
             <nav >
                 <ul>
                     <li>
-                        <a>Anywhere</a>
+                        <Anywhere />
                     </li>
                     <li>
-                        <a>Any week</a>
+                        <AnyWeek />
                     </li>
                     <li>
-                        <Searchbar />
+                        <AddGuest />
                         <SearchButton />
                     </li>
                 </ul>
             </nav>
-        </>
+        </div>
     )
 }

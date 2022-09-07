@@ -1,6 +1,10 @@
 export const Settings = () => {
     return (
-        <button>🌐</button>
+        <div className="setting-container">
+            <button>Become a host</button>
+            <button>🌐</button>
+            <button>🙍‍♂️</button>
+        </div>
 
     )
 }
