@@ -1,4 +1,4 @@
-import magnifyingGlass from '../../../images/search.png'
+import magnifyingGlass from '../../../../images/search.png'
 
 export const SearchButton = () => {
     return (

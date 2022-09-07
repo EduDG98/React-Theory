@@ -1,7 +1,6 @@
 import '../../styles/navbar/navbar.css'
-import { FooterNavbar } from './FooterNavBar'
-import { HeaderNavbar } from './HeaderNavbar'
-
+import { FooterNavbar } from './footerNavBar/FooterNavBar'
+import { HeaderNavbar } from './headerNavbar/HeaderNavbar'
 
 export const Navbar = () => {
     return (

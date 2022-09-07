@@ -1,4 +1,4 @@
-import './../../styles/navbar/footerNavbar.css'
+import './../../../styles/navbar/footerNavbar.css'
 import { CathegoryItem } from './CathergoryItem'
 
 export const FooterNavbar = () => {

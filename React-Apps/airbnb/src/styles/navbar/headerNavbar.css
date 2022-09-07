@@ -4,23 +4,26 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    gap: 10em;
+    gap: 16em;
 }
 
 /* Menubar Logo*/
 .main-logo {
-    margin: auto
+    margin-left: 4em;
+    width: 110px;
 }
+
 
 /* ---- MENUBAR -----*/
 .menubar-container ul {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
     align-items: center;
 
     border: 1px solid rgba(228, 217, 217, 0.829);
-    border-radius: 50px;
     box-shadow: 0.5px 1px 10px rgba(228, 217, 217, 0.829);
+    border-radius: 50px;
 }
 
 .menubar-container ul:hover {
@@ -30,7 +33,7 @@
 .menubar-container li {
     margin: 10px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .menubar-container li:first-child {
@@ -38,7 +41,6 @@
 }
 
 .menu-item-contanier {
-    padding: 4px;
     border-right: 1px solid rgba(228, 217, 217, 0.829);
     padding-right: 1em;
 }
@@ -57,7 +59,7 @@
 /* "Add Guest" and "Button" - Last item in the Menubar*/
 .menubar-container li:last-child {
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 1em;
 }
@@ -79,7 +81,43 @@
 
 /*--- Settings ---*/
 .setting-container {
+    margin-right: 100px;
     display: grid;
     grid-template-columns: 1fr auto auto;
-    gap: 1em;
+    gap: 4px;
+}
+
+.host-button-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.setting-container button {
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.setting-container button:hover {
+    background-color: rgba(248, 245, 245, 0.829);
+}
+
+.setting-container img {
+    width: 18px;
+    float: left;
+    color: white;
+}
+
+.profile-wrapper button {
+    border: 1px solid rgba(199, 188, 188, 0.829);
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
