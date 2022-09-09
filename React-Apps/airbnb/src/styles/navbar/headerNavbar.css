@@ -15,7 +15,14 @@
 
 
 /* ---- MENUBAR -----*/
+.menubar-container {
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+}
+
 .menubar-container ul {
+    max-width: 320px;
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
