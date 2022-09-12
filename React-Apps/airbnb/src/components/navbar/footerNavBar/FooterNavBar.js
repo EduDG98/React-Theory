@@ -4,9 +4,7 @@ import { CategoryList } from './CategoryList'
 export const FooterNavbar = () => {
     return (
         <div className='footer-navbar-container'>
-            <div className='scroll-container'>
-                <CategoryList />
-            </div>
+            <CategoryList />
             <button>FILTER</button>
         </div>
     )
