@@ -1,8 +1,16 @@
-import categoryList from '../../../data/categoryList.json'
-import iconImagen from '../../../images/category-icons/farms.jpg'
+import categoryList from '../../../data/categoryList'
+
 
 export const CategoryList = () => {
     return (
-        <img src={iconImagen} />
+        <>
+            {
+                categoryList.map(categoryItem => {
+                    return (
+                        <img src={categoryItem.icon} />
+                    )
+                })
+            }
+        </>
     )
 }
