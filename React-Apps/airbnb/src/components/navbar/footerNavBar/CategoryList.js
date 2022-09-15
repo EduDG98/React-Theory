@@ -1,16 +1,17 @@
-import categoryList from '../../../data/categoryList'
+import categoryList from '../../../data/categoryList.js'
 
 
 export const CategoryList = () => {
     return (
-        <>
+        <div>
             {
-                categoryList.map(categoryItem => {
+                Array.from(categoryList).map(categoryItem => {
+                    console.log(categoryItem.name)
                     return (
                         <img src={categoryItem.icon} />
                     )
                 })
             }
-        </>
+        </div>
     )
 }
