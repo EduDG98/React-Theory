@@ -2,7 +2,7 @@ const categoryList = [
     {
         "name": "islands",
         "caption": "Islands",
-        "icon": require("../images/category-icons/camping.jpg")
+        "icon": require("../images/category-icons/islands.jpg")
     },
     {
         "name": "camping",

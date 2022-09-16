@@ -1,13 +1,47 @@
 .footer-navbar-container {
-    background-color: thistle;
     display: grid;
     grid-template-columns: 18fr 1fr;
+    align-items: center;
     gap: 1em;
-    margin: 0 60px 0 4em;
-    padding: 1em 0 1em 1em;
+    margin: 4px 60px 4px 4em;
+    padding: 5px 0 0 1em;
 }
 
 .scroll-container {
     display: flex;
     justify-content: space-between;
+}
+
+.category-list {
+    height: 70px;
+    display: flex;
+    overflow: auto;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3em;
+    gap: 6px;
+}
+
+.category-item img {
+    width: 22px;
+}
+
+.category-item p {
+    font-size: 11px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+#filter-button {
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+    border: none;
+    border-radius: 10px;
 }

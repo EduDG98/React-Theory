@@ -5,7 +5,7 @@ export const FooterNavbar = () => {
     return (
         <div className='footer-navbar-container'>
             <CategoryList />
-            <button>FILTER</button>
+            <button id='filter-button'>FILTER</button>
         </div>
     )
 }

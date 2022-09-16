@@ -3,12 +3,15 @@ import categoryList from '../../../data/categoryList.js'
 
 export const CategoryList = () => {
     return (
-        <div>
+        <div className='category-list'>
             {
                 Array.from(categoryList).map(categoryItem => {
                     console.log(categoryItem.name)
                     return (
-                        <img src={categoryItem.icon} />
+                        <div className='category-item'>
+                            <img src={categoryItem.icon} />
+                            <p>{categoryItem.caption}</p>
+                        </div>
                     )
                 })
             }
