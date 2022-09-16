@@ -1,20 +1,19 @@
 import categoryList from '../../../data/categoryList.js'
 
-
-export const CategoryList = () => {
+export const CategoryList = (scrollOffset) => {
     return (
         <div className='category-list'>
             {
                 Array.from(categoryList).map(categoryItem => {
-                    console.log(categoryItem.name)
                     return (
-                        <div className='category-item'>
+                        <div key={categoryItem.id} className='category-item'>
                             <img src={categoryItem.icon} />
                             <p>{categoryItem.caption}</p>
                         </div>
                     )
                 })
             }
+            {/** <button className='scroll-button'>➡</button> */}
         </div>
     )
 }

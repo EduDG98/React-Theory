@@ -59,6 +59,7 @@
 .menubar-container a {
     color: rgb(88, 88, 88);
     font-family: sans-serif;
+    font-size: 13px;
     cursor: pointer;
     white-space: nowrap;
 }

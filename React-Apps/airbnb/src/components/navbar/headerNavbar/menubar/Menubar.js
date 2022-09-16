@@ -8,13 +8,13 @@ export const Menubar = () => {
         <div className='menubar-container'>
             <nav >
                 <ul>
-                    <li key='anywhere-key'>
+                    <li key='item1'>
                         <Anywhere />
                     </li>
-                    <li key='any-week-key'>
+                    <li key='item2'>
                         <AnyWeek />
                     </li>
-                    <li key='add-guest-key'>
+                    <li key='item3'>
                         <AddGuest />
                         <SearchButton />
                     </li>
