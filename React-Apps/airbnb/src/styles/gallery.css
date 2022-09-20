@@ -1,18 +1,50 @@
+* {
+    border: 1px solid blueviolet;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
     margin: 4em;
+    row-gap: 2em;
+}
+
+/* ------ CARD ------- */
+
+.card-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    justify-content: center;
 }
 
 .card {
-    display: grid;
-    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    position: relative;
 }
 
 .card>img {
-    object-fit: contain;
-    height: 100%;
-    max-width: 100%;
+    object-fit: cover;
+    height: 288px;
+    width: 273px;
     border-radius: 20px;
+}
+
+.right-card-button {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.left-card-button {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+
+
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
 }
