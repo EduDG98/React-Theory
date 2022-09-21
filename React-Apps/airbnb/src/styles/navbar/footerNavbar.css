@@ -3,8 +3,8 @@
     grid-template-columns: 18fr 1fr;
     align-items: center;
     gap: 1em;
-    margin: 4px 60px 4px 4em;
-    padding: 5px 0 0 1em;
+    margin: 4px 5em 4px 5em;
+    padding-top: 5px;
     position: relative;
 }
 

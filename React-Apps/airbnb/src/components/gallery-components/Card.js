@@ -10,9 +10,13 @@ export const Card = () => {
                 housesList.map((houseItem) => {
                     return (
                         <div keys={houseItem.id} className='card'>
-                            <img className='card-photo' src={houseItem.images[0]} />
-                            <button className='card-button left-card-button'><img src={leftArrow} /></button>
-                            <button className='card-button right-card-button'><img src={rightArrow} /></button>
+                            <div className='imagen-wrapper'>
+                                <img className='house-imagen' src={houseItem.images[0]} />
+                                <div className='card-button-wrapper'>
+                                    <button className='card-button left-card-button'><img src={leftArrow} /></button>
+                                    <button className='card-button right-card-button'><img src={rightArrow} /></button>
+                                </div>
+                            </div>
                             <p> Place </p>
                             <p> Type</p>
                             <p> Date</p>
@@ -21,6 +25,7 @@ export const Card = () => {
                     )
                 })
             }
+
         </div>
     )
 }

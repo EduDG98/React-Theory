@@ -1,61 +1,61 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 4em;
+    margin: 0 5em 0 5em;
     row-gap: 2em;
 }
 
-/* ------ CARD ------- */
-
 .card-wrapper {
-    display: grid;
-    grid-template-rows: auto 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    margin: auto;
 }
 
 .card {
-    position: relative;
-    z-index: -2;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    justify-content: space-between;
+
 }
 
-.card>img {
-    object-fit: cover;
-    height: 278px;
-    width: 273px;
+.imagen-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.house-imagen {
+    width: 278px;
+    height: 273px;
     border-radius: 20px;
 }
 
-.right-card-button {
+.card-button-wrapper {
     position: absolute;
-    top: 35%;
-    right: 5%;
-
-    border: none;
-    border-radius: 50px;
-    padding: 10px;
-
+    display: flex;
+    bottom: 45%;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.right-card-button img {
-    height: 10px;
+.card-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.8;
 }
 
-.left-card-button {
-    position: absolute;
-    top: 35%;
-    left: 5%;
-
-    border: none;
-    border-radius: 50px;
-    padding: 10px;
+.card-button:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition-duration: 0.5s;
 }
 
-.left-card-button img {
-    height: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-button img {
+    width: 9px;
+    height: 9px;
 }
