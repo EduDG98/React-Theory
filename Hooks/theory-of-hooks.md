@@ -146,8 +146,11 @@ const Child = () => {
 
 ## 5. useMemo
 
+### <ins>MEMOIZING</ins>: Is as caching (to store in the cache) a value so that it does not need to be recalculated. 
+
 - It is used to recompute a value when the dependencies specified changes.
-- So the useMemo Hooks is formed by a function and an ``array`` of ``dependency``
+- So the useMemo Hooks is norally formed by a ``function`` and an ``array`` of ``dependency``. the function execute everytime that the dependency change.
+- But also we can use the Memo Hook in ``objects`` and when a the dependency change the component render the object. In this way, we acelerate every render of the component.
 
 ```javascript
     const memoizedValue = useMemo(() => /*function*/, [/*dependencies*/])
@@ -161,18 +164,55 @@ const Child = () => {
     }
 
     const MyComponent = () => {
-        const doubleNumber = useMemo (slowFunction(num), [num]);
+        const doubleNumber = useMemo(slowFunction(num), [num]);
         
         return(
             <>
-                <input type='number' value={value} onChange={ (event) => event.target.value}></input>
+                <input type='number' value={value} onChange={(event) => event.target.value}></input>
                 <button>{doubleNumber}</button>
             </>
         )
     }
+```
+<ins>**EXAMPLE**</ins> (To use ``useMemo`` in an object)
+```javascript
+    const MyComponent = () => {
+        const [life, setLife] = useState(false)
+        const plantColor = useMemo({
+            return {
+                color: life ? green : brown
+            }
+        }, [life])
 
+        return(
+            <>
+                <p>Hey there, my plant is {plant}</p>
+                <button onClick={() => setPlant(!life)}> plant it </button>
+            </>
+        )
+    }
+```
+
+---
+
+## 6. useCallback
+
+- Instead of a memoized value, this Hook return a memoized function or callback.
+- The use and syntaxis is the same as the useMemo but useCallback have a nice advantages referenciating values. As this Hook return and callbak not a value, we can add an argument to this callback
+
+```javascript
+    const showNextNumbers = ((argument)=> {
+        return [number + argument, number + argument + 1, number + argument + 2]
+    }, [number])
 
 ```
+
+---
+
+## 7. useReducer
+
+-
+
 
 
 
