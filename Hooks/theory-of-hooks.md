@@ -31,7 +31,7 @@ It carries out an effect every time the component render or if we choose it if a
 We can have three behaviour when we use useEffect:
 
 1. ``Not to add the dependecy array:`` it runs with every render.
-2. ``Add the dependency array empty:`` it only renderse the first time thecomponent is mount.
+2. ``Add the dependency array empty:`` it only renderse the first time the component is mount.
 3. ``Add dependencies in the dependency array:`` it only renders the first timen and when the dependencies change.
 
 ```javascript
@@ -49,12 +49,12 @@ useEffect( () => {
 
 ## 3. useContext
 - It is used to aovid ``props drilling``. Passing props to the children component that we want, instead of passing as a props through all components.
-- We should use it when share global data.
+- We should use it when we are sharing global data.
 - The steps to use are:
 1. To creacte a context with **``createContext()``**
 2. To use the created context to wrap the around the component tree. We do it with the **``Provider``** property.
 3. To use the ``value`` prop in our context to move the props.
-4. To read the value un the other coponent using the the **``Consumer``** property,
+4. To read the value in the other coponent using the the **``Consumer``** property,
 
 - The created ``context`` is an object with two properties **``Provider``** and **``Consumer``**. Which both are **components**.
 
@@ -64,7 +64,7 @@ useEffect( () => {
 
     const GrandFather = () => {
         return(
-            <MyContext.Provider value='Pepe'>
+            <MyContext.Provider value={name}>
                 <p>I'm your grandpa and my name is Juanjo</p>
                 <Father />
             </MyContext.Provider>
