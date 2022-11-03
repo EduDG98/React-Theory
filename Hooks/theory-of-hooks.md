@@ -54,7 +54,7 @@ useEffect( () => {
 1. To creacte a context with **``createContext()``**
 2. To use the created context to wrap the around the component tree. We do it with the **``Provider``** property.
 3. To use the ``value`` prop in our context to move the props.
-4. To read the value in the other coponent using the the **``Consumer``** property,
+4. To read the value in the other component using the the **``Consumer``** property.
 
 - The created ``context`` is an object with two properties **``Provider``** and **``Consumer``**. Which both are **components**.
 
@@ -149,8 +149,8 @@ const Child = () => {
 ### <ins>MEMOIZING</ins>: Is as caching (to store in the cache) a value so that it does not need to be recalculated. 
 
 - It is used to recompute a value when the dependencies specified changes.
-- So the useMemo Hooks is norally formed by a ``function`` and an ``array`` of ``dependency``. the function execute everytime that the dependency change.
-- But also we can use the Memo Hook in ``objects`` and when a the dependency change the component render the object. In this way, we acelerate every render of the component.
+- So the useMemo Hooks is normally formed by a ``function`` and an ``array`` of ``dependency``. The function execute everytime that the dependency changes.
+- But also we can use the Memo Hook in ``objects`` and when a dependency changes the component render the object. In this way, we acelerate every render of the component.
 
 ```javascript
     const memoizedValue = useMemo(() => /*function*/, [/*dependencies*/])
