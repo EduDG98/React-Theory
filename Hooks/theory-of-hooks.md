@@ -231,9 +231,23 @@ const reduer = (state, action) => {
     switch (action.type {
         case: 'increment':
             return {count: state.count + 1}
+        case: 'decrement':
+            return {count: state.count - 1}
+        default:
+            return state
     })
 }
 ```
+- Then we create de component with the useReducer Hook inside:
+- And the function which will call each ``action`` trough the ``dispatch`` function.
+ ```js
+    const App = () =>{
+        const [state, dispatch] = useReducer(reducer, {count: 0})
+
+        const increment = () => dispatch(type: 'increment')
+        const decrement = () => dispatch(type: 'decrement')
+    }
+ ```
 
 
 
