@@ -31,8 +31,8 @@ It carries out an effect every time the component render or if we choose it if a
 We can have three behaviour when we use useEffect:
 
 1. ``Not to add the dependecy array:`` it runs with every render.
-2. ``Add the dependency array empty:`` it only renderse the first time the component is mount.
-3. ``Add dependencies in the dependency array:`` it only renders the first timen and when the dependencies change.
+2. ``Add the dependency array empty:`` it only renders the first time the component is mount.
+3. ``Add dependencies in the dependency array:`` it only renders the first time and when the dependencies change.
 
 ```javascript
 useEffect( () => {
@@ -210,8 +210,32 @@ const Child = () => {
 ---
 
 ## 7. useReducer
+- *Components with many state updates spread across many event handlers can get overwhelming. For these cases, you can consolidate all the state update logic outside your component in a single function, called a reducer* - ReactDocs.
+- So this hook is used to manage state with a ``reducer``.
+- The hook return and array with the current state of the variable (which can have a initial state if it is given) and a dispatch function to change the interaction.
+- The Hook it is initialize with the ``reducer`` function and an ``initial value``. This value is usually an object because we workwith more complex states.
+- ``dispatch`` is a function that we call it to update the variable ``state``. We do that because when we use dispatch, it is calling the ``reducer`` function.
 
--
+```js
+const [state, dispatch] = useReducer(reducer, {count: 0})
+```
+
+- The ``reducer`` function has 2 arguments:
+    1. state: it's the current state.
+    2. action: it's what we send through the ``dispatch`` function.
+- When we are calling ``dispatch`` we are changing the ``action`` argument in the reducer.
+- So to conclude, the ``reducer`` return a new state accordint to the ``action`` specify. Each ``action`` it is a different way to update the ``state``, in that case we usually use a ``switch-case``.
+
+```js
+const reduer = (state, action) => {
+    switch (action.type {
+        case: 'increment':
+            return {count: state.count + 1}
+    })
+}
+```
+
+
 
 
 
