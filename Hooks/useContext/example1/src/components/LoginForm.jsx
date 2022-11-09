@@ -1,23 +1,32 @@
-import React, { useState, useContext } from 'react'
-import { AuthContext } from '../context/authContext'
+import React, { useContext } from 'react'
+import { ADMIN_USER, AuthContext } from '../context/authContext'
 
-export const LoginForm = ({ login }) => {
-    const [details, setDetails] = useState({ name: '', password: '' })
+export const LoginForm = () => {
     const authContext = useContext(AuthContext)
 
-    const submitHandler = (event) => {
-        event.preventDefault();
-        login(details)
+    const handleLogin = () => {
+        if ((authContext.user == ADMIN_USER.username) && (authContext.password == ADMIN_USER.password)) {
+            console.log('Logged in');
+            authContext.setIsSigned(true)
+            authContext.setUser(authContext.user)
+            dispatchUpdateUsername(authContext.user)
+        } else {
+            console.log('Details not match')
+        }
     }
-    console.log(authContext)
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        handleLogin()
+    }
 
     return (
-        <form onSubmit={submitHandler}>
+        <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor='name'>Username</label>
-                <input type='text' name='name' id='name' onChange={event => setDetails({ ...details, name: event.target.value })} value={details.name} required />
+                <input type='text' name='name' id='name' onChange={event => authContext.setUser(event.target.value)} required />
                 <label htmlFor='password'>Password</label>
-                <input type='password' name='password' id='password' onChange={event => setDetails({ ...details, password: event.target.value })} value={details.password} required />
+                <input type='password' name='password' id='password' onChange={event => authContext.setPassword(event.target.value)} required />
                 <input type='submit' />
             </div>
         </form>

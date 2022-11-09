@@ -227,7 +227,7 @@ const [state, dispatch] = useReducer(reducer, {count: 0})
 - So to conclude, the ``reducer`` return a new state accordint to the ``action`` specify. Each ``action`` it is a different way to update the ``state``, in that case we usually use a ``switch-case``.
 
 ```js
-const reduer = (state, action) => {
+const reducer = (state, action) => {
     switch (action.type {
         case: 'increment':
             return {count: state.count + 1}
