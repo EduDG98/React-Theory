@@ -16,15 +16,28 @@ const updateUsernameAction = (state, action) => {
     return newState;
 }
 
+const updatePasswordAction = (state, action) => {
+    const newState = { ...state };
+    newState.password = action.newPassword;
+    return newState;
+}
+
+const updateIsSignedAction = (state) => {
+    const newState = { ...state };
+    newState.isSigned = !(newState.isSigned);
+    return newState
+}
+
 const authReducer = (state, action) => {
     switch (action.type) {
         case 'UPDATE_USER':
             return updateUsernameAction(state, action);
         case 'UPDATE_PASSWORD':
-            return updatePasswordAction;
+            return updatePasswordAction(state, action);
         case 'SET_IS_SIGNED_IN':
-            return updateIsSignedAction;
+            return updateIsSignedAction(state, action);
         default:
+            throw new Error()
             return { ...state };
     }
 }
@@ -42,7 +55,9 @@ export const AuthContextProvider = ({ children }) => {
         return {
             state,
             dispatch,
-            dispatchUpdateUserName: (newUsername) => dispatch({ type: 'UPDATE_USER', newUsername })
+            dispatchUpdateUsername: (newUsername) => dispatch({ type: 'UPDATE_USER', newUsername }),
+            dispatchUpdatePassword: (newPassword) => dispatch({ type: 'UPDATE_PASSWORD', newPassword }),
+            dispatchUpdateIsSigned: () => dispatch({ type: 'SET_IS_SIGNED_IN' })
 
         }
     }, [state])

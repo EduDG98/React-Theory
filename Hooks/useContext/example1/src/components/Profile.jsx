@@ -6,12 +6,12 @@ export const Profile = () => {
 
     const handlerLogout = () => {
         console.log('Logout');
-        authContext.setIsSigned(false);
+        authContext.dispatchUpdateIsSigned();
     }
 
     return (
         <div>
-            <h2>Welcome, {authContext.user}</h2>
+            <h2>Welcome, {authContext.state.user}</h2>
             <button onClick={handlerLogout}>Logut</button>
         </div>
     )

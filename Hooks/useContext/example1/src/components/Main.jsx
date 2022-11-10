@@ -9,7 +9,7 @@ export const Main = ({ children }) => {
 
     return (
         <div className="App">
-            {(authContext.isSigned == true) ? (
+            {(authContext.state.isSigned == true) ? (
                 <Profile />
             ) : (
                 <LoginForm />
