@@ -23,9 +23,21 @@ export const LoginForm = () => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor='name'>Username</label>
-                <input type='text' name='name' id='name' onChange={event => authContext.dispatchUpdateUsername(event.target.value)} required />
+                <input
+                    type='text'
+                    name='name'
+                    id='name'
+                    onChange={event => authContext.dispatchUpdateUsername(event.target.value)}
+                    required
+                />
                 <label htmlFor='password'>Password</label>
-                <input type='password' name='password' id='password' onChange={event => authContext.dispatchUpdatePassword(event.target.value)} required />
+                <input
+                    type='password'
+                    name='password'
+                    id='password'
+                    onChange={event => authContext.dispatchUpdatePassword(event.target.value)}
+                    required
+                />
                 <input type='submit' />
             </div>
         </form>
