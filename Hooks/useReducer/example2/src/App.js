@@ -1,11 +1,12 @@
-import { ToDo } from './components/ToDo';
+import { Main } from './components/Main';
+import { TodoContextProvider } from './context/TodoContext';
 
 function App() {
 
   return (
-    <div className="App">
-      <ToDo />
-    </div>
+    <TodoContextProvider>
+      <Main />
+    </TodoContextProvider>
   );
 }
 
