@@ -4,16 +4,17 @@ import TodoInput from './TodoInput';
 import TodoElement from './TodoElement';
 
 export const Main = () => {
-    const todoContext = useContext(TodoContext)
-
-    console.log(todoContext.state)
+    const todoContext = useContext(TodoContext);
 
     return (
-        <>
+        <div className='mainContent'>
             <TodoInput />
-            {todoContext.state.map(todoItemElement => {
-                return <TodoElement key={todoContext.state.id} item={todoItemElement} />
-            })}
-        </>
+
+            <div className='elementWrapper'>
+                {todoContext.state.map(todoItemElement => {
+                    return <TodoElement key={todoContext.state.id} item={todoItemElement} />
+                })}
+            </div>
+        </div>
     )
 };

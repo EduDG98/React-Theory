@@ -1,3 +1,73 @@
-.App {
+html {
+    background-color: #90B77D;
+}
+
+h1 {
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blanchedalmond;
+}
+
+.mainWrapper {
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.mainContent {
+    padding: 1em;
+    background-color: rgb(214, 147, 64);
+    border-radius: 8px;
+}
+
+input {
+    height: 20px;
+    min-width: 530px;
+    padding: 6px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+input:hover {
+    transform: scale(1.03);
+    transition-duration: 1s;
+}
+
+.elementWrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5px;
+    padding: 1em;
+    max-width: 600px;
+
+}
+
+.elementWrapper span {
+    max-width: 300px;
+    word-break: break-all;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonWrapper button {
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #DEB6AB;
+}
+
+.buttonWrapper button:active {
+    transform: scale(1.1);
 }

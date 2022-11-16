@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid';
 export const ACTIONS = {
     ADD_TODO: 'add_todo',
     COMPLETE_TODO: 'complete_todo',
-    DELETE_TODO: 'delete_todo'
+    DELETE_TODO: 'delete_todo',
 }
 
 export const TodoContext = createContext(null)
@@ -31,6 +31,12 @@ const completeTodoAction = (state, action) => {
     })
 };
 
+const deleteTodoAction = (state, action) => {
+    const newState = [...state];
+
+    return newState.filter(todoItem => todoItem.id !== action.id);
+}
+
 //REDUCER
 const reducer = (state, action) => {
     switch (action.type) {
@@ -55,7 +61,11 @@ export const TodoContextProvider = ({ children }) => {
     };
 
     const dispatchCompleteTodoAction = (id) => {
-        dispatch({ type: ACTIONS.COMPLETE_TODO, id: id });
+        dispatch({ type: ACTIONS.COMPLETE_TODO, id });
+    };
+
+    const dispatchDeleteTodoAction = (id) => {
+        dispatch({ type: ACTIONS.DELETE_TODO, id });
     };
 
     //USEMEMO
@@ -66,7 +76,8 @@ export const TodoContextProvider = ({ children }) => {
             state,
             dispatch,
             dispatchAddNewTodoAction,
-            dispatchCompleteTodoAction
+            dispatchCompleteTodoAction,
+            dispatchDeleteTodoAction
 
         };
     }, [name, state]);

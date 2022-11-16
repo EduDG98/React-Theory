@@ -6,12 +6,12 @@ export const TodoInput = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        todoContext.dispatchAddNewTodoAction(todoContext.name)
-        todoContext.setName('')
-    }
+        todoContext.dispatchAddNewTodoAction(todoContext.name);
+        todoContext.setName('');
+    };
 
     return (
-        <>
+        <div className='inputWrapper'>
             <form onSubmit={handleSubmit}>
                 <input
                     typr='text'
@@ -19,8 +19,8 @@ export const TodoInput = () => {
                     onChange={event => todoContext.setName(event.target.value)}
                 />
             </form>
-        </>
+        </div>
     )
 }
 
-export default TodoInput
+export default TodoInput;
