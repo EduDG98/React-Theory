@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { TodoContext } from '../context/TodoContext';
-import TodoInput from './TodoInput';
+import TodoInput from './TodoInput/TodoInput';
 import TodoElement from './TodoElement';
 
 export const Main = () => {
